@@ -30,7 +30,7 @@ These instructions will help you set up the project locally for development and 
 #### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/research-paper-app.git
+    git clone https://github.com/Sounak990/Research-Paper-Search-Save-Application
     ```
 2. Install dependencies for the backend server:
     ```bash
