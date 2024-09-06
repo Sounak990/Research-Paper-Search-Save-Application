@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research Paper Finder</title>
+  <link rel="stylesheet" href="\InternProject\frontend\src\styles\styles.css">
+  <!-- Favicon for the browser tab -->
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+  <!-- Notification Container -->
+  <div class="notification-container" id="notificationContainer"></div>
+
+  <!-- Blur Overlay (hidden by default) -->
+  <div class="blur-overlay" id="blurOverlay"></div>
+
+  <header>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#search-section" onclick="showSection('search-section')">Search Papers</a></li>
+        <li><a href="#saved-section" onclick="showSection('saved-section')">Saved Papers</a></li>
+        <li><a href="#profile-section" onclick="showSection('profile-section')">Profile</a></li>
+      </ul>
+      <div class="profile">
+        <img src="icon.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-info">
+          <p>Sounak Santra</p>
+          <p>Saved Papers: <span id="savedCount">0</span></p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Search Section -->
+<section id="search-section" class="active">
+  <div class="search-container">
+    <h2>Find Research Papers</h2>
+    <input type="text" id="searchInput" class="search-bar" placeholder="Enter keywords">
+    <button id="searchSubmitBtn" class="search-btn">Search</button>
+  </div>
+  <div class="categories">
+    <div class="category" data-category="Engineering">
+      <img class="lazy" data-src="Engineering.jpg" alt="Engineering">
+      <p>Engineering</p>
+    </div>
+    <div class="category" data-category="Medical">
+      <img class="lazy" data-src="Medical.jpg" alt="Medical">
+      <p>Medical</p>
+    </div>
+    <div class="category" data-category="Business">
+      <img class="lazy" data-src="Business.jpg" alt="Business">
+      <p>Business</p>
+    </div>
+    <div class="category" data-category="Science">
+      <img class="lazy" data-src="Science.jpg" alt="Science">
+      <p>Science</p>
+    </div>
+    <div class="category" data-category="Astronomy">
+      <img class="lazy" data-src="Astronomy.jpg" alt="Astronomy">
+      <p>Astronomy</p>
+    </div>
+  </div>
+
+
+ <div id="results"></div>
+    </section>
+
+    <!-- Saved Papers Section -->
+    <section id="saved-section">
+      <h2>Saved Papers</h2>
+      <div id="savedResults">
+        <!-- Example of a saved paper item with a remove button -->
+        <div class="saved-paper-item">
+          <p>Sample Research Paper Title</p>
+          <button class="remove-paper-btn">Remove</button>
+        </div>
+      </div>
+    </section>
+
+   <!-- Profile Section -->
+<section id="profile-section">
+  <h2>User Profile</h2>
+  <div class="profile-summary">
+    <div class="profile-info">
+      <p><strong>Name:</strong> <span class="profile-name">Sounak Santra</span></p>
+      <p><strong>Saved Papers:</strong> <span id="profileSavedCount" class="profile-count">0</span></p>
+      <p><strong>Total Searches:</strong> <span id="searchCount" class="profile-count">0</span></p>
+    </div>
+    <div class="profile-actions">
+      <button class="profile-action-btn" onclick="scrollToSavedSection()">View Saved Papers</button>
+     <button class="profile-action-btn" onclick="editProfile()">Edit Profile</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="\InternProject\frontend\src\app.js"></script>
+  <script src="\InternProject\frontend\src\lazyload.js"></script>
+</body>
+</html>
